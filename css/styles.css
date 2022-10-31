@@ -427,6 +427,7 @@ border-color: var(--accent-color);
 textarea {
     padding: 12px 16px;
 }
+
 .form-commet {
     width: 100%;
     height: 120px;
@@ -452,7 +453,7 @@ textarea {
 }
 .form-button:hover,
 .form-button:focus {
-    background: #188CE8;
+    background-color: var(--button-color);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -967,6 +968,9 @@ margin-right:70px;
     color: rgba(255, 255, 255, 0.6);
 }
 
+.footer-social-block {
+    margin-right: 93px;
+}
 
 .social-block-title {
     margin-bottom: 20px;
@@ -1014,4 +1018,37 @@ margin-right:70px;
 .social-icon {
     
     fill: currentColor;  
+}
+
+.footer-input {
+    padding: ;
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: var(--dark-background-color);
+}
+
+.footer-form-button {
+    /* display: flex;
+    /* align-items: center; */
+    /* text-align: center; */  
+    width: 200px;
+    height: 50px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--title-white-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+   
+} 
+
+.footer-form-button:hover,
+.footer-form-button:focus {
+    background-color: var(--button-color);
 }

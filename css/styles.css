@@ -312,7 +312,7 @@ img {
     justify-content: end;
     top: 50%;
     left: 50%;
-    width: 528px;
+    width: 528px; 
     height: 581px;
     
     background-color: var(--title-white-color);
@@ -322,6 +322,10 @@ img {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     padding: 40px;
+}
+
+.form-field {
+    margin-right: 15px;
 }
 
 .modal-close-button {
@@ -340,11 +344,14 @@ img {
     cursor: pointer;
 }
 
-.close-icon:hover,
+/* .close-icon:hover,
 .close-icon:focus {
     background-color: var(--accent-color);
-}
+} */
 
+.modal-close-button:hover {
+    fill:var(--accent-color);
+}
 
 
 /* ----------------------Форма-------------------------- */
@@ -449,11 +456,54 @@ border-color: var(--accent-color);
 
 /* ------------------------checkbox---------------------- */
 
-.checkbox-input {
-    appearance: none;
+.checkbox-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
 }
 
+.checkbox-input {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.checkbox-chec-markr {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+
+    border: 2px solid var(--title-text-color);
+    border-radius: 2px;
+    margin-right: 4px;
+}
+
+.checkbox-input:checked + .checkbox-chec-markr {
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+    background-image: url('../images/checkmark.svg');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+.checkbox-input:hover+.checkbox-chec-markr {
+    border-color: var(--accent-color);
+    cursor: pointer;
+}
+
+.checkbox-link {
+    color: var(--accent-color);
+    margin-left: 4px;
+}
+
+
+/*
+
 .checkbox-label{
+    display: block;
     position: relative;
     padding-left: 24px;
     margin-bottom: 31px;
@@ -476,19 +526,13 @@ border-color: var(--accent-color);
     left: 4px;
     width: 11px;
     height: 8px;
-    border: 1px solid black;
-    border-radius: 2px;
-    background-image: url("../images/");
-    background-color: var(--accent-color);
+    background-image: url("../images/icons.svg#icon-chec-mark");
     content: "";
     opacity: 0;
 }
 
 
-
-
 .checkbox-input:checked + .checkbox-label::after {
-    /* color: var(--accent-color); */
     opacity: 1;
 } 
 
@@ -500,6 +544,9 @@ border-color: var(--accent-color);
 .checkbox-link {
     color: var(--accent-color);
 }
+
+*/
+
 
 /*------- Особливості -------*/
 

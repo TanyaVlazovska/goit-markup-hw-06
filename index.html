@@ -423,24 +423,38 @@
         </div>
         <!-- </div> -->
 
-        <div class="footer-social-block">
-          <div class="footer-form">
-          <p class="social-block-title">Підпишіться на розсилку</p>
-          <!-- <label class="form-footer-label">
-          <p class="form-footer-title">Підпишіться на розсилку</p></label
-        > -->
-          <input
-            class="footer-input"
-            id="person-email"
-            type="email"
-            name="person-email"
-            placeholder="email"
-          />
-          </div>
-          <button class="footer-form-button" type="submit">Підписатися</button>
-        </div>
+        <!-- <div class="footer-social-block">
+           <div class="footer-form"> -->
+        <!-- <p class="social-block-title">Підпишіться на розсилку</p>
+          <form class="form-footer">
+            <div class="form-footer-field">
+              <label for
+              <input
+                class="footer-input"
+                id="person-email"
+                type="email"
+                name="person-email"
+                placeholder="E-mail"
+              />
+            </div>
+            <button class="footer-form-button" type="submit">Підписатися</button>
+          </form>
+        </div> -->
+
+        <form class="form-subscribe">
+          <label class="subscribe-label"
+            ><b class="subscribe-title">Підпишіться на розсилку</b>
+            <input class="subscribe-email" type="email" name="email" placeholder="E-mail" /></label
+          ><button class="subscribe-send-btn" type="submit">
+            <span class="subscribe-send-title">Підписатися</span>
+            <svg class="subscribe-send-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </footer>
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <!-- <h2>Open</h2>
@@ -497,7 +511,9 @@
               <a class="checkbox-link" href="#">Умови договору</a>
             </label>
 
-            <button class="form-button" type="submit">Відправити</button>
+            <button class="form-button" type="submit">
+              <span class="button-submit-title">Відправити</span>
+            </button>
           </form>
         </div>
       </div>

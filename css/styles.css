@@ -341,7 +341,7 @@ img {
     background-color: var(--title-white-color);
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    
 }
 
 /* .close-icon:hover,
@@ -367,7 +367,7 @@ img {
 }
 
 input {
-    /* padding: 8px; */
+    
     font-family: inherit;
 }
 
@@ -413,6 +413,7 @@ border-color: var(--accent-color);
     /* top: 50%;
     transform: translateY(-50); */
     fill:currentColor; 
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .form-control:focus-within .form-icon {
@@ -442,23 +443,30 @@ textarea {
     margin-left: 85px;
     margin-right: 125px;
     position: absolute;
-        width: 200px;
-        height: 50px;
-        /* left: 284px;
-        top: 727px;
-     */
-        background-color: var(--accent-color);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        border-radius: 4px;
+    width: 200px;
+    height: 50px;
+
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .form-button:hover,
 .form-button:focus {
     background-color: var(--button-color);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
+.button-submit-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--title-white-color); 
+}
 
-/* ------------------------checkbox---------------------- */
+/* ------------------------Сheckbox---------------------- */
 
 .checkbox-label {
     display: flex;
@@ -483,6 +491,7 @@ textarea {
     border: 2px solid var(--title-text-color);
     border-radius: 2px;
     margin-right: 4px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-input:checked + .checkbox-chec-markr {
@@ -803,7 +812,7 @@ textarea {
     border-radius: 4px;
     border: none;
     cursor: pointer;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-button:hover,
@@ -870,8 +879,6 @@ textarea {
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: var(--primary-text-color); 
-    
-
 }
 
 .portfolio-thumb {
@@ -1020,8 +1027,91 @@ margin-right:70px;
     fill: currentColor;  
 }
 
+/* ------- Форма підписки на розсилку ---------*/
+
+.form-subscribe {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.subscribe-label {
+    margin-right: 12px;
+}
+
+.subscribe-title {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--title-white-color);
+}
+
+.subscribe-email {
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0);
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-email::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-send-btn {
+    display: flex;
+    align-items: center;
+
+    width: 200px;
+    height: 50px;
+    padding-left: 28px;
+    padding-right: 28px;
+
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 1px solid var(--accent-color);
+    color: var(--title-white-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-send-btn:hover,
+.subscribe-send-btn:focus {
+    background-color: var(--button-color);
+}
+
+.subscribe-send-title {
+    margin-right: 10px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+}
+
+.subscribe-send-icon {
+    fill: currentColor;
+}
+
+/* .form-footer {
+display: flex;
+justify-content: space-between;
+align-items: baseline;
+}
+
 .footer-input {
-    padding: ;
+    padding: 10px;
     width: 358px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1031,9 +1121,7 @@ margin-right:70px;
 }
 
 .footer-form-button {
-    /* display: flex;
-    /* align-items: center; */
-    /* text-align: center; */  
+    
     width: 200px;
     height: 50px;
     font-style: normal;
@@ -1051,4 +1139,4 @@ margin-right:70px;
 .footer-form-button:hover,
 .footer-form-button:focus {
     background-color: var(--button-color);
-}
+} */
